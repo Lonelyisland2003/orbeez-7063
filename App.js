@@ -27,7 +27,7 @@ const stationList = [
   'Serangoon','Tampines','Toa Payoh','Woodlands','Yishun'
 ];
 
-// 1️ Home Screen
+// Home Screen
 function HomeScreen({ navigation }) {
   return (
     <View style={styles.center}>
@@ -45,7 +45,7 @@ function HomeScreen({ navigation }) {
   );
 }
 
-// 2️ Description Screen
+// Description Screen
 function DescriptionScreen({ route, navigation }) {
   const { mode } = route.params;
   const [desc, setDesc] = useState('');
@@ -75,7 +75,7 @@ function DescriptionScreen({ route, navigation }) {
   );
 }
 
-// 3️ Location Screen
+// Location Screen
 function LocationScreen({ route, navigation }) {
   const { mode, desc } = route.params;
   const [station, setStation] = useState(stationList[0]);
@@ -114,7 +114,8 @@ function LocationScreen({ route, navigation }) {
   );
 }
 
-// 4️ DateTime Screen
+
+// DateTime Screen
 function DateTimeScreen({ route, navigation }) {
   const { mode, desc, station } = route.params;
   const [date, setDate]         = useState(new Date());
@@ -183,7 +184,7 @@ function DateTimeScreen({ route, navigation }) {
   );
 }
 
-// 5️ Photo Screen & Submit
+// Photo Screen & Submit
 function PhotoScreen({ route, navigation }) {
   const { mode, desc, station, date } = route.params;
   const [photoUri, setPhotoUri] = useState(null);
